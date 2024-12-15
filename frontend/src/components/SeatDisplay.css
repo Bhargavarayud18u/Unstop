@@ -1,0 +1,34 @@
+.seats-grid {
+  margin-top: 20px;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+.seat.available {
+  background-color: green;
+}
+
+.seat.booked {
+  background-color: red;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
