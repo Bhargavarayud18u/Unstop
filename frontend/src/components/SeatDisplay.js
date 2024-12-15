@@ -14,7 +14,7 @@ const SeatBooking = () => {
   // Function to fetch seats data
   const fetchSeats = () => {
     axios
-      .get('http://localhost:5000/seats')
+      .get('https://unstop-z41h.onrender.com/seats')
       .then((response) => setSeats(response.data))
       .catch((error) => console.error('Error fetching seats:', error));
   };
@@ -27,7 +27,7 @@ const SeatBooking = () => {
     }
 
     axios
-      .post('http://localhost:5000/book', { numSeats })
+      .post('https://unstop-z41h.onrender.com/book', { numSeats })
       .then((response) => {
         const booked = response.data;
         setBookedSeats(booked);
@@ -46,7 +46,7 @@ const SeatBooking = () => {
   // Function to initialize/reset the seats
   const handleInitializeSeats = () => {
     axios
-      .get('http://localhost:5000/initialize')
+      .get('https://unstop-z41h.onrender.com/initialize')
       .then(() => {
         alert('Seats have been initialized.');
         fetchSeats(); // Refresh the seat grid after initialization
